@@ -1,0 +1,30 @@
+The Standard Template Library (STL) in C++ provides several container classes, each with its own strengths and weaknesses. The "best" container to use depends on the
+specific requirements of your program and the type of data you're working with.
+
+Here are some of the most commonly used containers in STL and their use cases:
+
+* std::vector: A dynamic array that automatically resizes as elements are added or removed. It is useful when you need to store a large number of elements and when
+random access to elements is required.
+
+* std::list: A doubly-linked list that stores elements in a linear order. It is useful when you need to insert or remove elements from the middle of a container
+frequently.
+
+* std::deque: A double-ended queue that allows elements to be inserted or removed from either end. It is useful when you need to add or remove elements from both ends
+frequently.
+
+* std::set: An ordered container that stores unique elements. It is useful when you need to store elements in a sorted order and quickly check if an element already
+exists in the container.
+
+* std::map: An ordered container that stores elements in the form of key-value pairs. It is useful when you need to store elements in a sorted order and quickly look up
+elements by their key.
+
+* std::unordered_set: An unordered container that stores unique elements. It is useful when you need to store elements quickly and check if an element already exists in
+the container.
+
+* std::unordered_map: An unordered container that stores elements in the form of key-value pairs. It is useful when you need to store elements quickly and look up
+elements by their key.
+
+It's important to note that, the time complexity of operation on the container depends on the underlying data structure of the container. The time complexity of each
+container's operations is different. For example, std::vector has O(1) random access, while std::list has O(n) and std::set has O(log n) for insertion/deletion.
+
+It's always better to choose the container based on your use case and the requirements of your program.
