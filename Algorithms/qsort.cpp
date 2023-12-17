@@ -57,10 +57,16 @@ int main()
 {
     int arr[] = {3, 2, 4, 22, 4, 5};
     cout << "Input Array:" << endl;
-    print(arr);
+    for (int i = 0; i < 6; i++)
+    {
+        cout << arr[i] << " ";
+    }
     cout << endl;
     quickSort(arr, 0, 5);
     cout << "Final Array:" << endl;
-    print(arr);
+    for (int i = 0; i < 6; i++)
+    {
+        cout << arr[i] << " ";
+    }
     cout << endl;
 }
