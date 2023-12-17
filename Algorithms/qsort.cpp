@@ -11,7 +11,7 @@ void print(int arr[])
     cout << endl;
 }
 
-int partition_(int arr[], int l, int r)
+int partition(int arr[], int l, int r)
 {
     int pivot = arr[r], i = l, j = r - 1;
 
@@ -47,7 +47,7 @@ void quickSort(int arr[], int l, int r)
 {
     if (l < r)
     {
-        int div = partition_(arr, l, r);
+        int div = partition(arr, l, r);
         quickSort(arr, l, div - 1);
         quickSort(arr, div + 1, r);
     }
