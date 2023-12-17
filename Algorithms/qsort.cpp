@@ -55,7 +55,8 @@ void quickSort(int arr[], int l, int r)
 
 int main()
 {
-    int arr[] = {3, 2, 4, 22, 4, 5};
+    int arr[] = {1, 2, 5, 2, 2, 2}; // Elements at positions 3-5 are all equal to the pivot
+
     cout << "Input Array:" << endl;
     for (int i = 0; i < 6; i++)
     {
