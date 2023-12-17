@@ -5,7 +5,9 @@ void print(int arr[])
 {
     cout << "Intermediate Array:" << endl;
     for (int i = 0; i < 6; i++)
+    {
         cout << arr[i] << " ";
+    }
     cout << endl;
 }
 
@@ -55,16 +57,10 @@ int main()
 {
     int arr[] = {3, 2, 4, 22, 4, 5};
     cout << "Input Array:" << endl;
-    for (int i = 0; i < 6; i++)
-    {
-        cout << arr[i] << " ";
-    }
+    print(arr);
     cout << endl;
     quickSort(arr, 0, 5);
     cout << "Final Array:" << endl;
-    for (int i = 0; i < 6; i++)
-    {
-        cout << arr[i] << " ";
-    }
+    print(arr);
     cout << endl;
 }
