@@ -5,7 +5,7 @@ vector<int> occurances;
 void findidx(string s, string p)
 {
 
-    for (int i = 0; i <= s.length() - p.length(); ++i)
+    for (int i = 0; i <= s.size(); i++)
     {
         bool match = true;
         for (int j = 0; j < p.length(); ++j)
@@ -24,7 +24,6 @@ void findidx(string s, string p)
     }
 }
 
-// Main function
 int main()
 {
     string s, p;
