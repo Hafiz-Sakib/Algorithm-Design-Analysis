@@ -13,7 +13,7 @@ int main()
 {
     // { weight,profit }
     vector<pair<int, int>> v = {{21, 7}, {24, 4}, {12, 6}, {40, 5}, {30, 6}};
-    int capacity = 20, i = 0;
+    int capacity = 20;
     double profit = 0;
     sort(v.begin(), v.end(), cmp);
     for (int i = 0; i < v.size(); i++)
