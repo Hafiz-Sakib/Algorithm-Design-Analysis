@@ -8,9 +8,9 @@ using namespace std;
 int main()
 {
     Boost;
-    // { weight , profit }
+    // { profit,weight }
     vector<pair<int, int>> v = {{21, 7}, {24, 4}, {12, 6}, {40, 5}, {30, 6}};
-    int weight = 20;
+    int capacity = 20;
     double profit = 0;
     for (int i = 0; i < v.size(); i++)
     {
@@ -19,19 +19,22 @@ int main()
     sort(v.begin(), v.end());
     for (int i = 0; i < v.size(); i++)
     {
-        if (weight > 0 && v[i].first <= weight)
+        if (capacity > 0 && v[i].first <= capacity)
         {
-            weight -= (-1 * v[i].first);
-            profit += v[i].second;
+            capacity -= v[i].second;
+            profit += (-1 * v[i].second);
             continue;
         }
         else
         {
-            profit += v[i].second * (weight / v[i].first);
+            profit += ((-1 * v[i].first) * (capacity / v[i].second));
             break;
         }
     }
-
     cout << profit << endl;
+    for (auto u : v)
+    {
+        // cout << u.first << ' ' << u.second << endl;
+    }
     return 0;
 }
