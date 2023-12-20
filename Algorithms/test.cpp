@@ -2,13 +2,10 @@
 // given items their weights and values and capacity
 // find the maximum value obtainable with given capacity
 // considering we can take parts of an item
-#include <utility>
-#include <iostream>
-#include <algorithm>
-#include <cstdio>
-
+#include <bits/stdc++.h>
+using namespace std;
 // first is value second is weight
-typedef std::pair<double, double> item;
+typedef pair<double, double> item;
 
 // return if first item has greater value by weight ratio than the
 bool comp_item(item &a, item &b)
@@ -47,7 +44,7 @@ int main()
     item items[100] = {{21, 7}, {24, 4}, {12, 6}, {40, 5}, {30, 6}};
     double capacity = 20;
 
-    std::cout << mx_profit(items, n, capacity) << std::endl;
+    cout << mx_profit(items, n, capacity) << endl;
 
     return 0;
 }
