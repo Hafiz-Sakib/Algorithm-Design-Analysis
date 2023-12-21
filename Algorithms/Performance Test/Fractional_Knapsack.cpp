@@ -11,18 +11,29 @@ bool cmp(pii a, pii b)
 }
 int main()
 {
-    // { weight,profit }
-    vector<pair<int, int>> v = {{21, 7}, {24, 4}, {12, 6}, {40, 5}, {30, 6}};
-    int capacity = 20;
+    // { weight,cost }
+    int n, capacity;
+    cin >> n >> capacity;
+    vector<pair<int, int>> v(n);
+    for (auto &u : v)
+    {
+        cin >> u.first >> u.second;
+    }
     double profit = 0;
     sort(v.begin(), v.end(), cmp);
     for (int i = 0; i < v.size(); i++)
     {
-        int z = min(capacity, v[i].first);
-        capacity -= z;
-        profit += (z * v[i].second);
+        if (capacity > 0)
+        {
+            int z = min(capacity, v[i].first);
+            capacity -= z;
+            profit += (z * v[i].second);
+        }
+        else
+        {
+            break;
+        }
     }
     cout << "max profit : " << profit << endl;
-
     return 0;
 }
