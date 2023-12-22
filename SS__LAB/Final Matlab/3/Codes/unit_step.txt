@@ -1,0 +1,7 @@
+t = -5:0.01:5;    % Adjust the time range
+f = heaviside(t);  % Unit step function
+plot(t, f)         % Plotting the unit step function
+xlabel('Time')
+ylabel('Amplitude')
+title('Unit Step Function')
+grid on

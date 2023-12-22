@@ -1,0 +1,7 @@
+t = -5:0.002:5;    % Adjust the time range
+ramp = 2*t;        % Modified ramp function
+plot(t, ramp)      % Plotting the modified ramp function
+xlabel('Time')
+ylabel('Amplitude')
+title('Ramp Function')
+grid on
