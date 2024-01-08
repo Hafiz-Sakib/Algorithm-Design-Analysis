@@ -4,7 +4,9 @@ int root[50];
 bool root_find(int u, int v)
 {
     if (root[u] == root[v])
+    {
         return true;
+    }
     return false;
 }
 void union_(int u, int v, int vertex)
@@ -23,7 +25,9 @@ int main()
     int vertex, edge, w, u, v, tot_cost = 0;
     cin >> vertex >> edge;
     for (int i = 1; i <= vertex; i++)
+    {
         root[i] = i;
+    }
     pair<int, pair<int, int>> p[edge + 5];
     for (int i = 0; i < edge; i++)
     {
