@@ -25,16 +25,19 @@ int main()
             {
                 c[i][j] = c[i - 1][j - 1] + 1;
                 b[i][j] = "\\";
+                // Taking the value From left Diagonal cell
             }
             else if (c[i - 1][j] >= c[i][j - 1])
             {
                 c[i][j] = c[i - 1][j];
                 b[i][j] = "|";
+                // Taking the value From Upper cell
             }
             else
             {
                 c[i][j] = c[i][j - 1];
                 b[i][j] = "->";
+                // Taking the value From Left Side cell
             }
         }
     }
