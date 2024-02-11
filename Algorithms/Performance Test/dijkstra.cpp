@@ -21,7 +21,7 @@ void dijkstra(int source)
     while (!st.empty())
     {
         auto node = *st.begin();
-        // will give the minimum pair {weight , node}
+        // will give the minimum weighted pair {weight , node}
 
         int v = node.second;
         int dist = node.first;
